@@ -1,11 +1,17 @@
-exports.isatty = function () { return false; };
+export default {
+  isatty,
+  ReadStream,
+  WriteStream,
+};
 
-function ReadStream() {
+export function isatty() {
+  return false;
+}
+
+export function ReadStream() {
   throw new Error('tty.ReadStream is not implemented');
 }
-exports.ReadStream = ReadStream;
 
-function WriteStream() {
+export function WriteStream() {
   throw new Error('tty.WriteStream is not implemented');
 }
-exports.WriteStream = WriteStream;
